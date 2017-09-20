@@ -21,7 +21,11 @@ Thus every repository appears in a single specific cell of that grid.
 
 Given the identity matching, we had the contributions history and could even roughly estimate the impact as the ratio of
 contributed commits to the whole number of commits in the main branch of the project. We color the corresponding
-cell for each weighted contribution by the chosen user and compose the profile image. For example, this is
+cell for each weighted contribution by the chosen user and compose the profile image. The complete pipeline
+is in the [legacy notebook](legacy/from_scratch.ipynb) which can not be directly executed without the datasets and
+the last step which draws the images is fully functional and you can [play with it](profile.ipynb).
+
+For example, this is
 our CTO [Máximo Cuadros](https://github.com/mcuadros):
 
 ![Máximo's profile](máximo.png)
