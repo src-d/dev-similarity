@@ -6,7 +6,7 @@ is included here. For now, it's the profile images to visually compare the exper
 
 source{d} runs a massive-scale data retrieval pipeline that among other sources nearly mirrors all GitHub repositories.
 Everything related to working with developer metadata requires understanding which email addresses correspond
-to which GitHub users. [GitHub ToU](https://help.github.com/articles/github-terms-of-service/) directly forbids to use API for recruitment purposes which at the time we had, so there was no easy way to obtain that information.
+to which GitHub users. [GitHub ToU](https://help.github.com/articles/github-terms-of-service/) directly forbids to use the API for recruitment purposes, which at the time we had, so there was no easy way to obtain that information.
 
 Luckily, we were able to perform identity matching using various heuristics for Git commit signatures. For example, given two different signatures with the same name in the same repository, it is likely that the different email addresses belong to the same user.
 We never measured the accuracy of our heuristics - back then we were a humble startup - but our CTO claims that it worked reasonably well in practice.
@@ -18,8 +18,11 @@ and mapped into a regular 54x54 = 2916 grid and described the latter in the [blo
 Thus every repository appears in a single specific cell of that grid.
 
 Given the identity matching, we had the contribution history and could even roughly estimate the impact as the ratio of
-contributed commits to the whole number of commits in the main branch of a project. We color the corresponding
-cell for each weighted contribution by the chosen user and compose the profile image. As an example, this is how our CTO [Máximo Cuadros](https://github.com/mcuadros) developer fingerprint looks like under this approach:
+contributed commits to the whole number of commits in the main branch of a project. We color the corresponding cell for each weighted contribution by the chosen user and compose the profile image.
+
+The complete pipeline is in the [legacy notebook](legacy/from_scratch.ipynb) which can not be directly executed without the datasets and the last step which draws the images is fully functional and you can [play with it](profile.ipynb).
+
+As an example, this is how our CTO [Máximo Cuadros](https://github.com/mcuadros) developer fingerprint looks like under this approach:
 
 ![Máximo's profile](máximo.png)
 
