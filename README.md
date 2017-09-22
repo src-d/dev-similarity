@@ -57,6 +57,15 @@ a well known universal Python developer:
 There is an expressed Python trace + web development. We see that François always contributes very specific things.
 At the same time, Python deep learning pixels reside in the cloud of Python related projects.
 
+
+### Docker image
+
+```
+docker run -it --rm -p 8888:8888 srcd/dev-similarity
+```
+
+Then open the last printed link in your web browser.
+
 ### License
 
 Apache 2.0.
